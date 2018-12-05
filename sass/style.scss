@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding-top: 35vh;
+}
+
+.main-carousel {
+    margin: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: 100;
+}
+
+.carousel-cell {
+    display: flex;
+    width: 100%;
+    max-height: 50vh;
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-cell p {
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.flickity-page-dots {
+    display: none;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0;
+    background: #333;
+}
+
+.hash-links {
+    display: none;
+}
