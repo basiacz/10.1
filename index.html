@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>10.2</title>
+    <title>10.3</title>
     <link rel="stylesheet" type="text/css" href="vendor/Normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css" media="screen">
@@ -15,6 +15,7 @@
 
     <div id="carousel" class="main-carousel"></div>
     <div class="progress-bar"></div>
+    <div id="map"></div>
 
     <script id="template-carousel" type="x-tmpl-mustache">
         <div class="carousel-cell"> 
@@ -30,35 +31,55 @@
         var slideShow = [{
                 image: 'images/Budapest.jpeg',
                 title: 'Budapest',
-                description: 'Budapest is the capital of Hungary'
+                description: 'Hungary',
+                coords: {
+                    lat: 47.498,
+                    lng: 19.040
+                }
             },
             {
                 image: 'images/Florence.jpeg',
                 title: 'Florence',
-                description: 'Florence is located in Italy'
+                description: 'Italy',
+                coords: {
+                    lat: 43.779,
+                    lng: 11.246
+                }
             },
             {
                 image: 'images/Madrid.jpeg',
                 title: 'Madrid',
-                description: 'Madrid is the capital of Spain'
+                description: 'Spain',
+                coords: {
+                    lat: 40.416,
+                    lng: -3.703
+                }
             },
             {
                 image: 'images/Prague.jpeg',
                 title: 'Prague',
-                description: 'Prague is the capital of Czech Republic'
+                description: 'Czech Republic',
+                coords: {
+                    lat: 50.088,
+                    lng: 14.420
+                }
             },
             {
                 image: 'images/Santorini.jpeg',
                 title: 'Santorini',
-                description: 'Santorini is a volcanic island'
+                description: 'Greece',
+                coords: {
+                    lat: 36.393,
+                    lng: 25.461
+                }
             },
         ];
     </script>
 
-    <script type="text/javascript" src="vendor/hash.js"></script>
     <script type="text/javascript" src="vendor/flickity.pkgd.min.js"></script>
     <script type="text/javascript" src="vendor/mustache.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1Dr3McfZY4vF-MlC_64TI8j702ZQYv1k&callback=initMap"></script>
 </body>
 
 </html>

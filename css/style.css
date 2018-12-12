@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 
-body { margin: 0 auto; padding-top: 35vh; }
+body { margin: 0 auto; }
 
 .main-carousel { margin: auto; }
 
@@ -20,4 +20,4 @@ body { margin: 0 auto; padding-top: 35vh; }
 
 .progress-bar { height: 20px; width: 0; background: #333; }
 
-.hash-links { display: none; }
+#map { height: 50vw; width: 100%; }
