@@ -5,7 +5,7 @@ Mustache.parse(templateCarousel);
 
 for (var i = 0; i < slideShow.length; i++) {
     elem.insertAdjacentHTML('beforeEnd', Mustache.render(templateCarousel, slideShow[i]));
-};
+}
 
 var flkty = new Flickity(elem, {
     cellAlign: 'left',
@@ -29,7 +29,7 @@ flkty.on('scroll', function (progress) {
 window.initMap = function () {
     var map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 15,
+            zoom: 5,
             center: slideShow[0].coords
         }
     );
@@ -41,5 +41,13 @@ window.initMap = function () {
             position: slideShow[j].coords,
             map: map
         }));
+        markers[j].addListener('click', function () {
+            flkty.select(j);
+        });
     }
+    flkty.on('change', function (j) {
+        flkty.select(j);
+        map.panTo(slideShow[j].coords);
+        map.setZoom(10);
+    });
 };
