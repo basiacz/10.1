@@ -1,14 +1,22 @@
+var templateCarousel = document.getElementById('template-carousel').innerHTML;
 var elem = document.querySelector('.main-carousel');
+
+Mustache.parse(templateCarousel);
+
+for (var i = 0; i < slideShow.length; i++) {
+    elem.insertAdjacentHTML('beforeEnd', Mustache.render(templateCarousel, slideShow[i]));
+}
+
 var flkty = new Flickity(elem, {
     cellAlign: 'left',
     contain: true,
     hash: true,
 });
 
-var button = document.querySelector('.button');
-button.addEventListener('click', function (event) {
-    var selector = event.target.getAttribute('data-selector');
-    flkty.selectCell(selector);
+var restartButton = document.querySelector('.button');
+
+restartButton.addEventListener('click', function () {
+    flkty.select(0);
 });
 
 var progressBar = document.querySelector('.progress-bar');

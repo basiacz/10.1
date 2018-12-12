@@ -11,12 +11,6 @@ body {
     margin: auto;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 .button {
     top: 10px;
     left: 10px;
@@ -33,6 +27,22 @@ body {
     background-position: center;
     align-items: center;
     text-align: center;
+    div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+    }
+    h2,
+    p {
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        font-weight: bold;
+    }
+    img {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .carousel-cell p {

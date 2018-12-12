@@ -4,11 +4,15 @@ body { margin: 0 auto; padding-top: 35vh; }
 
 .main-carousel { margin: auto; }
 
-.container { max-width: 1200px; margin: 0 auto; text-align: center; }
-
 .button { top: 10px; left: 10px; position: absolute; z-index: 100; }
 
 .carousel-cell { display: -ms-flexbox; display: flex; width: 100%; max-height: 50vh; min-height: 250px; background-size: cover; background-position: center; -ms-flex-align: center; align-items: center; text-align: center; }
+
+.carousel-cell div { position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); left: 50%; }
+
+.carousel-cell h2, .carousel-cell p { color: white; font-size: 40px; font-weight: bold; }
+
+.carousel-cell img { position: relative; width: 100%; }
 
 .carousel-cell p { font-size: 70px; font-weight: bold; color: #fff; }
 
