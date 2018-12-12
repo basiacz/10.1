@@ -5,7 +5,7 @@ Mustache.parse(templateCarousel);
 
 for (var i = 0; i < slideShow.length; i++) {
     elem.insertAdjacentHTML('beforeEnd', Mustache.render(templateCarousel, slideShow[i]));
-};
+}
 
 var flkty = new Flickity(elem, {
     cellAlign: 'left',
